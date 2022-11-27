@@ -1,5 +1,5 @@
 from hashlib import sha512
-def hierarkeygen(path,parent_key):
+def generate(path,parent_key):
     l=path.split('/',1)
     s=l[0]
     key=sha512(parent_key+s.encode()).digest()[:32]
